@@ -3,6 +3,8 @@ from .ward_wise_household_income_sources import process_income_sources
 from .ward_wise_trained_population import process_trained_population
 from .ward_wise_major_skills import process_major_skills
 from .ward_wise_major_occupation import process_major_occupation
+from .ward_wise_households_on_loan import process_households_on_loan
+from .ward_wise_households_loan_use import process_households_loan_use
 
 # Set up logging
 logging.basicConfig(
@@ -20,6 +22,8 @@ def process_economics_data(source_conn, target_conn, generate_sql=True):
     process_trained_population(source_conn, target_conn, generate_sql)
     process_major_skills(source_conn, target_conn, generate_sql)
     process_major_occupation(source_conn, target_conn, generate_sql)
+    process_households_on_loan(source_conn, target_conn, generate_sql)
+    process_households_loan_use(source_conn, target_conn, generate_sql)
 
     # Add more economics data processing functions here as needed
 
