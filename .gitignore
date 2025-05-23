@@ -30,6 +30,7 @@ ENV/
 env/
 .env/
 .venv/
+dataExtractionVenv/
 
 # Distribution / packaging
 .Python
@@ -70,3 +71,4 @@ logs/
 *.swp
 *.swo
 .DS_Store
+
