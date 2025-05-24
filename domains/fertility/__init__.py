@@ -1,5 +1,6 @@
 import logging
 from .ward_wise_child_bearers import process_child_bearers
+from .ward_age_wise_first_child_age import process_first_child_age
 from .ward_wise_delivery_place import process_recent_delivery_location
 
 # Set up logging
@@ -16,6 +17,7 @@ def process_fertility_data(source_conn, target_conn, generate_sql=True):
     # Process fertility data
     process_child_bearers(source_conn, target_conn, generate_sql)
     process_recent_delivery_location(source_conn, target_conn, generate_sql)
+    process_first_child_age(source_conn, target_conn, generate_sql)
 
     # Add more fertility data processing functions here as they are implemented
     # For example:
