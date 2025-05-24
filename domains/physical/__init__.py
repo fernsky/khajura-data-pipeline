@@ -1,5 +1,8 @@
 import logging
 from .ward_wise_time_to_public_transport import process_time_to_public_transport
+from .ward_wise_time_to_market_center import process_time_to_market_center
+from .ward_wise_cooking_fuel import process_cooking_fuel
+
 
 # Set up logging
 logging.basicConfig(
@@ -14,12 +17,14 @@ def process_physical_data(source_conn, target_conn, generate_sql=True):
     
     # Process physical data
     process_time_to_public_transport(source_conn, target_conn, generate_sql)
+    process_time_to_market_center(source_conn, target_conn, generate_sql)
+    process_cooking_fuel(source_conn, target_conn, generate_sql)
+
     
     # Uncomment these as they are implemented:
     # process_ward_wise_housing_type(source_conn, target_conn, generate_sql)
     # process_ward_wise_drinking_water(source_conn, target_conn, generate_sql)
     # process_ward_wise_toilet_type(source_conn, target_conn, generate_sql)
-    # process_ward_wise_cooking_fuel(source_conn, target_conn, generate_sql)
     # process_ward_wise_electricity_access(source_conn, target_conn, generate_sql)
     
     logger.info("Completed physical infrastructure data processing")
