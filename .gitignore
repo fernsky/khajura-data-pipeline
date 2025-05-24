@@ -4,6 +4,7 @@
 
 # Python
 .venv/
+dataExtractionVenv/
 __pycache__/
 *.py[cod]
 *$py.class
