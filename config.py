@@ -26,7 +26,11 @@ ECONOMICS_SQL_DIR = os.path.join(SQL_OUTPUT_DIR, 'economics')
 DEMOGRAPHICS_SQL_DIR = os.path.join(SQL_OUTPUT_DIR, 'demographics')
 EDUCATION_SQL_DIR = os.path.join(SQL_OUTPUT_DIR, 'education')
 FERTILITY_SQL_DIR = os.path.join(SQL_OUTPUT_DIR, 'fertility')
+HEALTH_SQL_DIR = os.path.join(SQL_OUTPUT_DIR, 'health')
 
 # Ensure output directories exist
 os.makedirs(ECONOMICS_SQL_DIR, exist_ok=True)
 os.makedirs(DEMOGRAPHICS_SQL_DIR, exist_ok=True)
+os.makedirs(EDUCATION_SQL_DIR, exist_ok=True)
+os.makedirs(FERTILITY_SQL_DIR, exist_ok=True)
+os.makedirs(HEALTH_SQL_DIR, exist_ok=True)
