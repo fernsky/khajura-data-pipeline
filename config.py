@@ -24,6 +24,7 @@ SQL_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'export', 'sql')
 # Domain-specific SQL output directories
 ECONOMICS_SQL_DIR = os.path.join(SQL_OUTPUT_DIR, 'economics')
 DEMOGRAPHICS_SQL_DIR = os.path.join(SQL_OUTPUT_DIR, 'demographics')
+EDUCATION_SQL_DIR = os.path.join(SQL_OUTPUT_DIR, 'education')
 
 # Ensure output directories exist
 os.makedirs(ECONOMICS_SQL_DIR, exist_ok=True)

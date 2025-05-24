@@ -124,16 +124,16 @@ def extract_educational_level_data(source_conn):
     query = """
     SELECT 
         ward_no, 
-        education_level,
+        educational_level,
         COUNT(*) as population
     FROM 
         khajura_individual
     WHERE 
-        education_level IS NOT NULL
+        educational_level IS NOT NULL
     GROUP BY 
-        ward_no, education_level
+        ward_no, educational_level
     ORDER BY 
-        ward_no, education_level;
+        ward_no, educational_level;
     """
     
     # Execute the query
@@ -150,7 +150,7 @@ def transform_educational_level_data(df):
     df['ward_no'] = df['ward_no'].astype(int)
     
     # Map Nepali education levels to standardized enum values
-    df['educational_level_mapped'] = df['education_level'].apply(map_educational_level)
+    df['educational_level_mapped'] = df['educational_level'].apply(map_educational_level)
     
     # Ensure population is integer type
     df['population'] = df['population'].astype(int)
