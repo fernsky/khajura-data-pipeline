@@ -4,6 +4,7 @@ from .education import process_education_data
 from .fertility import process_fertility_data
 from .health import process_health_data
 from .physical import process_physical_data
+from .social import process_social_data
 # Uncomment the following line when the demographics module is implemented
 # from .demographics import process_demographics_data
 
@@ -24,5 +25,6 @@ def process_all_data(source_conn, target_conn, generate_sql=True):
     # process_fertility_data(source_conn, target_conn, generate_sql)
     # process_health_data(source_conn, target_conn, generate_sql)
     # process_demographics_data(source_conn, target_conn, generate_sql)
-    process_physical_data(source_conn, target_conn, generate_sql)
+    # process_physical_data(source_conn, target_conn, generate_sql)
+    process_social_data(source_conn, target_conn, generate_sql)
     logger.info("Completed processing all domains data")
